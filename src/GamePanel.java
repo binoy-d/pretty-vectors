@@ -16,7 +16,8 @@ public  class GamePanel extends JPanel{
 		public void paintComponent(Graphics g){
 			Graphics2D g2d = (Graphics2D) g;
 			//clear
-			g2d.clearRect(0, 0, this.getWidth(), this.getHeight());
+			g2d.setColor(Color.BLACK);
+			g2d.fillRect(0, 0, this.getWidth(), this.getHeight());
 			double scale = 50;
 			//render each vector
 			for(int i = 0; i < handler.getVectors().size(); i++){
