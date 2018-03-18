@@ -15,7 +15,7 @@ public class GameHandler{
 
       for(int i = 0;i<50;i++){
         for(int j = 0; j<50; j++){
-          vectors.add(new Vector2(i,j));
+          vectors.add(new Vector2(i*50,j*50));
         }
       }
 		}
@@ -23,8 +23,8 @@ public class GameHandler{
 		public void update(){
       PointerInfo a = MouseInfo.getPointerInfo();
       Point b = a.getLocation();
-      int mouseX = (int) (b.getX()/50);
-      int mouseY = (int) (b.getY()/50);
+      int mouseX = (int) (b.getX());
+      int mouseY = (int) (b.getY());
       //physics!
 
       for(Vector2 v : vectors){

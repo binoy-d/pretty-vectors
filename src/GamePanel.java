@@ -22,9 +22,9 @@ public  class GamePanel extends JPanel{
 			for(int i = 0; i < handler.getVectors().size(); i++){
 				Vector2 vector = handler.getVectors().get(i);
 				g2d.setColor(Color.RED);
-				int x2 = (int)(scale*(Math.cos(Math.toRadians(vector.getAngle()))+vector.getX()));
-				int y2 = (int)(scale*(Math.sin(Math.toRadians(vector.getAngle()))+vector.getY()));
-				g2d.drawLine((int)(vector.getX()*scale),(int)(vector.getY()*scale),x2,y2);
+				int x2 = (int)(scale*Math.cos(Math.toRadians(vector.getAngle()))+vector.getX());
+				int y2 = (int)(scale*Math.sin(Math.toRadians(vector.getAngle()))+vector.getY());
+				g2d.drawLine((int)(vector.getX()),(int)(vector.getY()),x2,y2);
 			}
 		}
 
